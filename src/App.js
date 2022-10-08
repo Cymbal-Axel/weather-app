@@ -7,10 +7,11 @@ function App() {
     <div className="App">
       <div>
         <Card 
-          max={'max'}
-          min={'min'}
-          name={'name'}
+          max={'25*'}
+          min={'12*'}
+          name={'italia'}
           img={'image'}
+          onClose={()=> alert('cerrar')}
         />
       </div>
       <hr />
