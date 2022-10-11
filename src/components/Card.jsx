@@ -2,7 +2,8 @@ import React from 'react';
 
 export default function Card(props){
 console.log(props)
-    return (<div>
+    return (
+    <div>
         <button onClick={props.onClose}>X</button>
         <h4>{props.name}</h4>
         <div>
@@ -11,5 +12,7 @@ console.log(props)
             <p>Max</p>
             <p>{props.max}</p>
         </div>
-        </div>)
+        <img src={`http://openweathermap.org/img/wn/${props.img}@2x.png`}/>
+    </div>
+        )
 }

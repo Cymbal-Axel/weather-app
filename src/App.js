@@ -1,15 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
 import Card from './components/Card.jsx';
+import data, {Cairns} from './data.js';
 
 function App() {
   return (
     <div className="App">
       <div>
         <Card 
-          max={'25*'}
-          min={'12*'}
-          name={'italia'}
+          max={Cairns.main.temp_max}
+          min={Cairns.main.temp_min}
+          name={Cairns.weather[0].icon}
           img={'image'}
           onClose={()=> alert('cerrar')}
         />
