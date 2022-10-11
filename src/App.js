@@ -9,8 +9,8 @@ function App() {
         <Card 
           max={Cairns.main.temp_max}
           min={Cairns.main.temp_min}
-          name={Cairns.weather[0].icon}
-          img={'image'}
+          name={Cairns.name}
+          img={Cairns.weather[0].icon}
           onClose={()=> alert('cerrar')}
         />
       </div>
