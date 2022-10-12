@@ -1,5 +1,6 @@
 import './App.css';
 import Card from './components/Card.jsx';
+import Cards from './components/Cards.jsx';
 import data, {Cairns} from './data.js';
 
 function App() {
@@ -15,6 +16,11 @@ function App() {
         />
       </div>
       <hr />
+
+      <div>
+        <Cards cities={data}/>
+      </div>
+      <hr/>
     </div>
   );
 }
