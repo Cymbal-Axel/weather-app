@@ -2,6 +2,7 @@ import './App.css';
 import Card from './components/Card.jsx';
 import Cards from './components/Cards.jsx';
 import data, {Cairns} from './data.js';
+import SearchBar from './components/SearchBar.jsx';
 
 function App() {
   return (
@@ -21,6 +22,11 @@ function App() {
         <Cards cities={data}/>
       </div>
       <hr/>
+      <div>
+        <SearchBar
+          onSearch={(ciudad)=> alert(ciudad)}
+        />
+      </div>
     </div>
   );
 }
