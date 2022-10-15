@@ -7,12 +7,13 @@ import SearchBar from './components/SearchBar.jsx';
 function App() {
   return (
     <div className="App">
-      
+
       <div>
         <SearchBar
           onSearch={(ciudad)=> alert(ciudad)}
         />
       </div>
+      <hr />
 
       <div>
         <Card 
@@ -29,11 +30,6 @@ function App() {
         <Cards cities={data}/>
       </div>
       <hr/>
-      <div>
-        <SearchBar
-          onSearch={(ciudad)=> alert(ciudad)}
-        />
-      </div>
     </div>
   );
 }
