@@ -7,6 +7,13 @@ import SearchBar from './components/SearchBar.jsx';
 function App() {
   return (
     <div className="App">
+      
+      <div>
+        <SearchBar
+          onSearch={(ciudad)=> alert(ciudad)}
+        />
+      </div>
+
       <div>
         <Card 
           max={Cairns.main.temp_max}
