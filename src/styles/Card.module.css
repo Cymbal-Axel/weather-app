@@ -14,3 +14,18 @@
     background-color: white;
     color: red;
 }
+
+.middleDiv{
+    display: flex;
+    flex-direction: row;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    align-content: center;
+    border: 2px solid grey;
+    border-radius: 10px;
+    height: 250px;
+}
