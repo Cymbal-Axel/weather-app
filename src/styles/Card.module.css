@@ -5,3 +5,12 @@
     margin: 5px;
     align-self: flex-end;
 }
+
+.btnColor{
+    color: white;
+}
+
+.btn:hover{
+    background-color: white;
+    color: red;
+}

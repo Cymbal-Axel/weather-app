@@ -4,7 +4,7 @@ import s from '../styles/Card.module.css';
 export default function Card(props){
     return (
     <div>
-        <button onClick={props.onClose} className={s.btn}>X</button>
+        <button onClick={props.onClose} className={`${s.btn} ${s.btnColor}`}>X</button>
         <h4>{props.name}</h4>
         <div>
             <p>Min</p>
