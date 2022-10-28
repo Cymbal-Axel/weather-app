@@ -18,6 +18,7 @@
 .middleDiv{
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 
 .card{
@@ -28,4 +29,12 @@
     border: 2px solid grey;
     border-radius: 10px;
     height: 250px;
+}
+
+.temperatureDiv{
+    margin: 5px;
+}
+
+.cardName{
+    margin-top: -10px;
 }
