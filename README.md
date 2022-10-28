@@ -4,6 +4,6 @@ Para abrir la pagina, pararse en la ubicacion del proyecto e instalar npm con el
 
 ### `npm install`
 
-Luego el siguiente
+Luego el siguiente para abrirlo:
 
 ### `npm start`
