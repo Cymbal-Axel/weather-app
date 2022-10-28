@@ -2,8 +2,8 @@
 
 Para abrir la pagina, pararse en la ubicacion del proyecto e instalar npm con el siguiente comando:
 
-### npm install
+### `npm install`
 
 Luego el siguiente
 
-### npm start
+### `npm start`
