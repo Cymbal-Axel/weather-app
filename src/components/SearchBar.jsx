@@ -3,9 +3,13 @@ import styles from '../styles/SearchBar.module.css';
 
 export default function SearchBar(props){
     return (
-        <div className={styles.searchContainer}>
-            <input type="text" placeholder="Ciudad"></input>
-            <button onClick={()=>props.onSearch('Buscando Ciudad')} className={styles.btn}>Agregar</button>
-        </div>
-    )
+        <form onSubmit={(e)=> {
+            e.preventDefault();
+            onSearch("Cairns");
+        }}>
+            <input type='text' placeholder='Ciudad...'/>
+            <input type='submit' value='Agregar'/>
+        </form>
+
+    );
 }
