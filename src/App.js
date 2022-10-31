@@ -4,7 +4,6 @@ import Card from './components/Card.jsx';
 import Cards from './components/Cards.jsx';
 import SearchBar from './components/SearchBar.jsx';
 import Nav from './components/Nav.jsx';
-import { response } from 'express';
 
 function App() {
   const [cities, setCities] = useState([]);
@@ -37,6 +36,7 @@ function App() {
 
   return (
     <div className="App">
+
       <Nav onSearch={onSearch}/>
 
      {/* <div>
@@ -51,7 +51,7 @@ function App() {
      <hr />*/}
 
       <div>
-        <Cards />
+        <Cards cities={cities}/>
       </div>
       <hr/>
     </div>
