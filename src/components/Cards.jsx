@@ -3,6 +3,7 @@ import Card from './Card.jsx';
 import styles from '../styles/Cards.module.css';
 
 export default function Cards(props){
+    console.log(props)
     if(!props.cities){
         return <h1>No hay Ciudades</h1>
     }
@@ -16,7 +17,8 @@ export default function Cards(props){
                         min={city.min}
                         name={city.name}
                         img={city.img}
-                        onClose={()=> alert(city.name)}
+                        id={city.id}
+                        onClose={()=>props.onClose(city.id)}
                     />
                 ))
             }

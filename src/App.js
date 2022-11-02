@@ -34,6 +34,10 @@ function App() {
     })
   }
 
+  function onClose(id){
+    setCities(oldCities => oldCities.filter(c => c.id != id));
+  }
+
   return (
     <div className="App">
 
@@ -51,7 +55,7 @@ function App() {
      <hr />*/}
 
       <div>
-        <Cards cities={cities}/>
+        <Cards cities={cities} onClose={onClose}/>
       </div>
       <hr/>
     </div>
