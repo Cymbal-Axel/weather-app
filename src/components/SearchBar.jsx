@@ -10,7 +10,7 @@ export default function SearchBar({onSearch}){
             e.preventDefault(); //va a prevenir que se recarge la pagina, por el onSubmit
             onSearch(city);
         }}>
-            <input type='text' placeholder='Ciudad...' vale={city} onChange={e => setCity(e.target.value)}/>
+            <input type='text' placeholder='Ciudad...' value={city} onChange={e => setCity(e.target.value)}/>
             <input type='submit' value='Agregar'/>
         </form>
 
