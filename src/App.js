@@ -4,16 +4,19 @@ import Card from './components/Card.jsx';
 import Cards from './components/Cards.jsx';
 import SearchBar from './components/SearchBar.jsx';
 import Nav from './components/Nav.jsx';
+import {Route, Routes} from 'react-router-dom';
 
 function App() {
   const [cities, setCities] = useState([]);
 
   const apiKey = '4ae2636d8dfbdc3044bede63951a019b';
-
+  
   function onSearch(city){
+
     fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`)
     .then(response => response.json()) //cuando tenga la respuesta, la paso a json con el .json para manipularla
     .then(response_json => {
+
       if(response_json.main !== undefined){
         const city ={
           min: Math.round(response_json.main.temp_min),
@@ -40,26 +43,23 @@ function App() {
 
   return (
     <div className="App">
-
+      {/*
       <Nav onSearch={onSearch}/>
-
-     {/* <div>
-        <Card 
-          max={Cairns.main.temp_max}
-          min={Cairns.main.temp_min}
-          name={Cairns.name}
-          img={Cairns.weather[0].icon}
-          onClose={()=> alert('cerrar')}
-        />
-      </div>
-     <hr />*/}
+    <hr/>
 
       <div>
         <Cards cities={cities} onClose={onClose}/>
       </div>
-      <hr/>
+      <hr/>*/}
+      <Routes>
+        <Route path={"/"} element={<Nav onSearch={onSearch}/>}/>
+        <Route exact path={"/"} element={<Cards cities={cities} onClose={onClose}/>}/>
+      </Routes>
     </div>
   );
+
+  
+  
 }
 
 export default App;
