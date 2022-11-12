@@ -5,6 +5,8 @@ import Cards from './components/Cards.jsx';
 import SearchBar from './components/SearchBar.jsx';
 import Nav from './components/Nav.jsx';
 import {Route, Routes} from 'react-router-dom';
+import About from './components/About.jsx';
+import City from './components/City.jsx';
 
 function App() {
   const [cities, setCities] = useState([]);
@@ -54,6 +56,8 @@ function App() {
       <Routes>
         <Route path={"/"} element={<Nav onSearch={onSearch}/>}/>
         <Route exact path={"/"} element={<Cards cities={cities} onClose={onClose}/>}/>
+        <Route exact path={"/About"} element={<About />}/>
+        <Route path={"/city/:cityId"} element={<City />}/>
       </Routes>
     </div>
   );
