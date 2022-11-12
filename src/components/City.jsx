@@ -1,9 +1,12 @@
 import React from 'react';
+import {useParams} from 'react-router-dom';
 
 
-export default function City(){
+export default function City(props){
+
+    let params = useParams();
     return(
-        <div>soy una city</div>
+        <div>soy la city numero:{params.cityId}</div>
     )
 }
 
