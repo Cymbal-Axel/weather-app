@@ -2,14 +2,22 @@
     display: flex;
     justify-content: flex-end;
     padding-right: 10px;
+    margin-top: -22px;
 }
 
 .btn{
+    color: black;
+    background-color: white;
+    border-radius: 8px;
+    height: 38px;
+}
+
+.btn:hover{
     color: white;
     background-color: black;
 }
 
-.btn:hover{
-    color: black;
-    background-color: white;
+.btnSize{
+    height: 35px;
+    border-radius: 8px;
 }
