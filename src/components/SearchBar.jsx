@@ -6,7 +6,7 @@ export default function SearchBar({onSearch}){
     const [city, setCity] = useState("");
 
     return (
-        <form onSubmit={(e)=> {
+        <form className={styles.searchContainer} onSubmit={(e)=> {
             e.preventDefault(); //va a prevenir que se recarge la pagina, por el onSubmit
             onSearch(city);
             setCity(""); //para que se limpie el input luego de hacer la busqueda.
