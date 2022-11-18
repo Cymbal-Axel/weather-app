@@ -1,12 +1,15 @@
 import React from 'react';
 import SearchBar from './SearchBar.jsx';
-import s from '../styles/Nav.module.css';
+import Navbar from 'react-bootstrap/Navbar';
 
 function Nav({onSearch}){
     return(
-        <div className={s.principalDiv}>
+        <Navbar bg="light" expand="lg">
+            <Navbar.Brand href="#home">Weather App</Navbar.Brand>
+        
             <SearchBar onSearch={onSearch}/>
-        </div>
+        
+        </Navbar>
     )
 }
 
