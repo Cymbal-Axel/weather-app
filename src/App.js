@@ -55,9 +55,12 @@ function App() {
       <hr/>*/}
       <Routes>
         <Route path={"/"} element={<Nav onSearch={onSearch}/>}/>
-        <Route exact path={"/"} element={<Cards cities={cities} onClose={onClose}/>}/>
-        <Route exact path={"/About"} element={<About />}/>
-        <Route path={"/city/:cityId"} element={<City/>}/>
+        
+        {/*<Route exact path={"/about"} element={<About />}/>
+        <Route path={"/city/:cityId"} element={<City/>}/>*/}
+      </Routes>
+      <Routes>
+        <Route path={"/"} element={<Cards cities={cities} onClose={onClose}/>}/>
       </Routes>
     </div>
   );
