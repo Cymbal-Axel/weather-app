@@ -59,9 +59,15 @@ function App() {
         {/*<Route exact path={"/about"} element={<About />}/>
         <Route path={"/city/:cityId"} element={<City/>}/>*/}
       </Routes>
+
       <Routes>
         <Route path={"/"} element={<Cards cities={cities} onClose={onClose}/>}/>
       </Routes>
+
+      <Routes>
+        <Route exact path={"/about"} element={<About />}/>
+      </Routes>
+
     </div>
   );
 
