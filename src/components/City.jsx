@@ -1,13 +1,28 @@
 import React from 'react';
-import {useParams} from 'react-router-dom';
 
 
 export default function City(props){
+    if(!props){
+        return(<div>La ciudad no existe</div>)
+    }
+    return (
+    <div>
 
-    let params = useParams();
+        <div>ID: {props.cities[0].id}</div>
+        <div>Nombre: {props.cities[0].name}</div>
+        <div>Temperatura maxima: {props.cities[0].max}</div>
+        <div>Temperatura minima: {props.cities[0].min}</div>
+        <div>Latitud: {props.cities[0].latitude}</div>
+        <div>Longitud: {props.cities[0].longitude}</div>
+
+    </div>)
+
+
+
+    /*let params = useParams();
     return(
         <div>soy la city numero:{params.cityId}</div>
-    )
+    )*/
 }
 
 
