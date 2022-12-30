@@ -43,7 +43,7 @@ function App() {
             yaExiste = true;
           }
         })
-        
+
         if(yaExiste === false){
           setCities(oldCities => [...oldCities, city]);
         }
@@ -59,12 +59,6 @@ function App() {
     setCities(oldCities => oldCities.filter(c => c.id != id));
   }
   
-  function nonRepeat(id){
-    setCities(oldCities => oldCities.filter((item,id)=>{
-      return oldCities.indexOf(item) === id;}))
-    
-    
-  }
 
 
   return (
