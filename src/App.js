@@ -7,6 +7,7 @@ import Nav from './components/Nav.jsx';
 import {Route, Routes} from 'react-router-dom';
 import About from './components/About.jsx';
 import City from './components/City.jsx';
+import {useParams} from 'react-router-dom';
 
 function App() {
   const [cities, setCities] = useState([]);
@@ -32,7 +33,22 @@ function App() {
           latitude: response_json.coord.lat
 
         };
-        setCities(oldCities => [...oldCities, city]);
+        //por cada ciudad vieja comparar el id de la misma contra el id de la nueva
+        var yaExiste = false;
+        cities.forEach(oldCity =>{    
+
+          if(oldCity.id === city.id){
+            setCities(oldCities => [...oldCities]);
+            alert('ciudad ya existente');
+            yaExiste = true;
+          }
+        })
+        
+        if(yaExiste === false){
+          setCities(oldCities => [...oldCities, city]);
+        }
+
+        
       }else{
         alert('Ciudad no encontrada')
       }
@@ -42,36 +58,34 @@ function App() {
   function onClose(id){
     setCities(oldCities => oldCities.filter(c => c.id != id));
   }
+  
+  function nonRepeat(id){
+    setCities(oldCities => oldCities.filter((item,id)=>{
+      return oldCities.indexOf(item) === id;}))
+    
+    
+  }
+
 
   return (
     <div className="App">
-      {/*
-      <Nav onSearch={onSearch}/>
-    <hr/>
-
-      <div>
-        <Cards cities={cities} onClose={onClose}/>
-      </div>
-      <hr/>*/}
+ 
       <Routes>
         <Route path="/" element={
             <div>
               <Nav onSearch={onSearch}/>
-              <Cards cities={cities} onClose={onClose}/>              
+              <Cards cities={cities} onClose={onClose}/>             
             </div>}/>
         
-        {/*<Route exact path={"/about"} element={<About />}/>
-        <Route path={"/city/:cityId"} element={<City/>}/>*/}
+        <Route path={"/city/:cityId"} element={<City cities={cities}/>}/>
       </Routes>
 
-      {/*<Routes>
-        <Route path={"/"} element={<Cards cities={cities} onClose={onClose}/>}/>
-        
-      </Routes>*/}
 
       <Routes>
-        <Route path={"/about"} element={<About />}/>
+        <Route path={"/About"} element={<About />}/>
       </Routes>
+
+      
 
     </div>
   );
