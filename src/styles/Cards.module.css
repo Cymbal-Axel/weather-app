@@ -2,3 +2,15 @@
     display: flex;
     justify-content: space-around;
 }
+
+.rcontainer{
+    
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+}
+.child {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-auto-rows: 16em;
+  }
